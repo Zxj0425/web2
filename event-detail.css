@@ -1,0 +1,171 @@
+/* Event Detail Page Styles */
+.event-detail-content {
+    background-color: var(--light-bg);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.event-detail-header {
+    position: relative;
+    overflow: hidden;
+}
+
+.event-detail-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.event-detail-image.image-placeholder {
+    height: 300px;
+}
+
+.event-detail-body {
+    padding: 2rem;
+}
+
+.event-detail-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.event-detail-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--light-text);
+}
+
+.event-detail-meta div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.event-detail-description {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.event-organization {
+    background-color: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+}
+
+.event-organization-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.event-organization-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.event-organization-logo.image-placeholder {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 0.7rem;
+}
+
+.event-organization-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.event-funding {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--bg-color);
+    border-radius: 8px;
+}
+
+.funding-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.funding-goal, .funding-current {
+    display: flex;
+    flex-direction: column;
+}
+
+.funding-progress-container {
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.funding-progress-bar {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+}
+
+.funding-percentage {
+    text-align: right;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.event-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+#register-button {
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+}
+
+/* Responsive Design for Event Detail */
+@media (max-width: 768px) {
+    .event-detail-image {
+        height: 200px;
+    }
+    
+    .event-detail-title {
+        font-size: 1.6rem;
+    }
+    
+    .event-detail-body {
+        padding: 1.5rem;
+    }
+    
+    .event-actions {
+        flex-direction: column;
+    }
+    
+    #register-button, #back-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .event-detail-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .funding-stats {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
